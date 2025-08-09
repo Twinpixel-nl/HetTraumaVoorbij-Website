@@ -1,0 +1,235 @@
+/* Algemene styling */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    background-color: #f0f0f0; /* Achtergrondkleur voor tussen de secties */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+.site-header {
+    background-color: #add0e0;
+    padding: 10px 5%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 80%;
+    height: auto;
+}
+
+.login-button {
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Hero Sectie */
+.hero {
+    background-image: url('images/hero-background.jpg'); /* Vervang dit door je eigen achtergrondafbeelding */
+    height: 400px; /* Hoogte van de hero sectie */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Donkere overlay voor betere leesbaarheid */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    font-weight: 300;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Introductie Sectie */
+.intro {
+    background-color: #6c8ca4;
+    color: white;
+    padding: 50px 20px;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro .lead {
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.intro h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.intro ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.intro ul li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.intro ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.intro p:last-of-type {
+    margin-top: 40px;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Oprichter Sectie */
+.founder {
+    background-color: #e2e2e2;
+    padding: 50px 20px;
+}
+
+.founder-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.founder-text {
+    flex: 2;
+}
+
+.founder h3 {
+    color: #6c8ca4;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.founder-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.founder-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.founder-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid #a4c1d2;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.disclaimer {
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer met schuine vorm */
+footer {
+    position: relative;
+    height: 100px; /* Hoogte van de schuine vorm */
+}
+
+.footer-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #add0e0;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* Responsive aanpassingen voor kleinere schermen */
+@media (max-width: 768px) {
+    .founder-content {
+        flex-direction: column-reverse; /* Foto boven de tekst op mobiel */
+        text-align: center;
+    }
+    
+    .founder-text {
+        text-align: center;
+    }
+}
