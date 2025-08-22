@@ -3,273 +3,664 @@
 /* ================================================ */
 
 /* 1. Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 
 /* 2. CSS Variabelen (Root) */
 :root {
-    /* Kleurenpalet */
-    --color-primary: #6a8eae;
-    --color-primary-light: #add8e6;
-    --color-background: #f8f8f8;
-    
-    /* Extra handige kleuren */
-    --color-text: #333333;
-    --color-white: #ffffff;
-    --color-border: #e0e0e0;
+  /* Kleurenpalet */
+  --color-primary: #6a8eae;
+  --color-primary-light: #add8e6;
+  --color-background: #f8f8f8;
 
-    /* Lettertype */
-    --font-primary: 'Montserrat', sans-serif;
+  /* Extra handige kleuren */
+  --color-text: #333333;
+  --color-white: #ffffff;
+  --color-border: #e0e0e0;
+
+  /* Lettertype */
+  --font-primary: "Montserrat", sans-serif;
 }
 
 /* 3. Algemene Reset & Basisinstellingen */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 100%; /* Standaard is 16px */
-    scroll-behavior: smooth;
+  font-size: 100%; /* Standaard is 16px */
+  scroll-behavior: smooth;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* 4. Body styling */
 body {
-    font-family: var(--font-primary); /* Gebruik van de variabele */
-    background-color: var(--color-background); /* Gebruik van de variabele */
-    color: var(--color-text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-primary); /* Gebruik van de variabele */
+  background-color: var(--color-background); /* Gebruik van de variabele */
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Header */
 .site-header {
-    background-color: var(--color-primary-light);
-    padding: 10px 5%;
-    border-bottom: 5px solid var(--color-primary); 
+  background-color: var(--color-primary-light);
+  padding: 10px 5%;
+  border-bottom: 5px solid var(--color-primary);
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo img {
-    max-width: 80%;
-    height: auto;
+  max-width: 80%;
+  height: auto;
 }
 
 .login-button {
-    color: var(--color-primary);
-    font-size: 1.1em;
-    font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 /* Hero Sectie */
 .hero {
-    background-image: url('images/hero-background.jpg'); /* Vervang dit door je eigen achtergrondafbeelding */
-    height: 550px; /* Hoogte van de hero sectie */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-    position: relative;
+  background-image: url("images/hero-background.jpg"); /* Vervang dit door je eigen achtergrondafbeelding */
+  height: 550px; /* Hoogte van de hero sectie */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Donkere overlay voor betere leesbaarheid */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Donkere overlay voor betere leesbaarheid */
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
-    font-size: 2.8em;
-    font-weight: 500;
-    margin-bottom: 15px;
-    line-height: 1.2;
-    color: var(--color-primary-light);
-
+  font-size: 2.8em;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  color: var(--color-primary-light);
 }
 
 .hero p {
-    font-size: 1.2em;
-    font-weight: 300;
+  font-size: 1.2em;
+  font-weight: 300;
 }
 
 /* Introductie Sectie */
 .intro {
-    background-color: var(--color-primary);
-    color: white;
-    padding: 50px 20px;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 50px 20px;
 }
 
 .intro-content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .intro .lead {
-    font-size: 1.3em;
-    font-weight: 300;
-    line-height: 1.5;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 .intro h2 {
-    font-size: 1.5em;
-    font-weight: 400;
-    margin-top: 40px;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 40px;
 }
 
 .intro ul {
-    list-style: none;
-    padding-left: 0;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.8;
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 .intro ul li {
-    padding-left: 30px;
-    position: relative;
-    margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .intro ul li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 14px;
-    height: 14px;
-    background-color: white;
-    border-radius: 50%;
-    opacity: 0.5;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
 }
 
 .intro p:last-of-type {
-    margin-top: 40px;
-    font-size: 1.2em;
-    font-weight: 300;
+  margin-top: 40px;
+  font-size: 1.2em;
+  font-weight: 300;
 }
 
 /* Oprichter Sectie */
 .founder {
-    background-color: var(--color-background);
-    padding: 50px 20px;
+  background-color: var(--color-background);
+  padding: 50px 20px;
 }
 
 .founder-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 40px;
 }
 
 .founder-text {
-    flex: 2;
+  flex: 2;
 }
 
 .founder h3 {
-    color: var(--color-primary);
-    font-size: 1.5em;
-    font-weight: normal;
+  color: var(--color-primary);
+  font-size: 1.5em;
+  font-weight: normal;
 }
 
 .founder-text p {
-    font-size: 1.1em;
-    line-height: 1.6;
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 .read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--color-primary);
-    font-weight: bold;
-    margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 .founder-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .founder-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 8px solid var(--color-primary-light);
-    object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 8px solid var(--color-primary-light);
+  object-fit: cover;
 }
 
 .disclaimer {
-    text-align: center;
-    margin-top: 40px;
-    font-style: italic;
-    color: var(--color-text);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+  color: var(--color-text);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Footer met schuine vorm */
 footer {
-    position: relative;
-    height: 100px; /* Hoogte van de schuine vorm */
+  position: relative;
+  height: 200px; /* Verhoogde hoogte voor content */
+  background-color: var(--color-primary);
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: auto;
+  filter: brightness(0) invert(1); /* Maakt logo wit */
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-shape {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-primary-light);
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary-light);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* Membership sectie */
+.membership {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 60px 20px;
+}
+
+.membership-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.membership h2 {
+  font-size: 2.2em;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.membership-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.membership-icon {
+  margin-bottom: 8px;
+}
+
+.membership-item h4 {
+  font-size: 1.1em;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Platform Info sectie */
+.platform-info {
+  background-color: var(--color-background);
+  padding: 60px 20px;
+}
+
+.platform-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.platform-info h2 {
+  color: var(--color-primary);
+  font-size: 2.2em;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-areas:
+    "community community community"
+    "ratio emotie fysiek";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.info-card {
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  color: white;
+}
+
+.info-card.community {
+  grid-area: community;
+  background-color: var(--color-primary);
+}
+
+.info-card.ratio {
+  grid-area: ratio;
+  background-color: var(--color-primary-light);
+  color: var(--color-text);
+}
+
+.info-card.emotie {
+  grid-area: emotie;
+  background-color: #8fa8c4;
+}
+
+.info-card.fysiek {
+  grid-area: fysiek;
+  background-color: #7a9bb8;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card-header svg {
+  filter: brightness(0) invert(1);
+  width: 30px;
+  height: 30px;
+}
+
+.card-number {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.card-label {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(106, 142, 174, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 1em;
+}
+.info-card p {
+  line-height: 1.5;
+  font-size: 1em;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pricing-disclaimer {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.price-tag {
+  background-color: var(--color-primary-light);
+  padding: 20px 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.price {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.cta-button {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #5a7a96;
+}
+
+/* Testimonial sectie */
+.testimonial {
+  background-color: var(--color-primary-light);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial blockquote {
+  font-size: 1.4em;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+
+.testimonial cite {
+  font-size: 1.1em;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* FAQ sectie */
+.faq {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 60px 20px;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.faq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  padding-right: 30px;
+}
+
+.faq-item h3::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.5em;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active h3::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-answer p {
+  line-height: 1.5;
+  opacity: 0.9;
 }
 
 /* Responsive aanpassingen voor kleinere schermen */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .info-cards {
+    grid-template-areas:
+      "community community"
+      "ratio emotie"
+      "fysiek fysiek";
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+}
+
 @media (max-width: 768px) {
-    .founder-content {
-        flex-direction: column-reverse; /* Foto boven de tekst op mobiel */
-        text-align: center;
-    }
-    
-    .founder-text {
-        text-align: center;
-    }
+  .founder-content {
+    flex-direction: column-reverse; /* Foto boven de tekst op mobiel */
+    text-align: center;
+  }
+
+  .founder-text {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+  }
+
+  .membership-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .info-cards {
+    grid-template-areas:
+      "community"
+      "ratio"
+      "emotie"
+      "fysiek";
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .price-tag {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .card-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-info h2,
+  .membership h2,
+  .faq h2 {
+    font-size: 1.8em;
+  }
 }
