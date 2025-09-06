@@ -431,7 +431,75 @@ footer {
   background-color: var(--color-primary-light);
   clip-path: polygon(0 100%, 100% 0, 100% 100%);
 }
+/* De container voor het grid */
+.features-grid {
+  display: grid;
+  /* Maak twee kolommen van gelijke breedte */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; /* De ruimte tussen de kaarten */
+  
+  /* Optioneel: centreer het grid op de pagina */
+  max-width: 900px;
+  margin: 40px auto;
+}
 
+/* De stijl voor elke individuele kaart */
+.feature-card {
+  background-color: #7d96b3; /* De blauwgrijze kleur van je voorbeeld */
+  color: white;
+  padding: 30px;
+  border-radius: 16px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* De styling voor de lijstjes in de kaarten */
+.feature-card ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.feature-card ul li {
+  margin-bottom: 8px;
+  text-align: left;
+  list-style:decimal;
+}
+
+/* Het ster-icoon */
+.star-icon {
+  width: 24px;
+  height: 24px;
+  fill: #e0e0e0; /* Een lichte kleur voor de ster */
+  margin-bottom: 15px;
+}
+
+/* --- DE MAGIE GEBEURT HIER --- */
+
+/* 1. Maak de derde kaart (links) langer */
+.card-long {
+  /* Laat deze kaart 2 rijen overspannen in plaats van 1 */
+  grid-row: span 2;
+}
+
+/* 2. Verplaats de vijfde kaart naar rechtsonder */
+.card-bottom-right {
+  /* Dwing deze kaart om in de tweede kolom te beginnen */
+  grid-column-start: 2;
+}
+
+
+/* --- VOOR MOBIELE APPARATEN (RESPONSIVE) --- */
+@media (max-width: 768px) {
+  .features-grid {
+    /* Op kleine schermen, maak er één kolom van */
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reset de specifieke plaatsing voor de onderste kaart op mobiel */
+  .card-bottom-right {
+    grid-column-start: auto;
+  }
+}
 /* Membership sectie */
 .membership {
   background-color: var(--color-primary);
@@ -440,7 +508,7 @@ footer {
 }
 
 .membership-content {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -448,7 +516,8 @@ footer {
 .membership h2 {
   font-size: 2.2em;
   margin-bottom: 50px;
-  font-weight: 400;
+  font-weight: 500;
+  color: var(--color-primary-light);
 }
 
 .membership-grid {
