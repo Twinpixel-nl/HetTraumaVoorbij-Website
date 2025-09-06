@@ -268,12 +268,102 @@ a {
   justify-content: center;
   align-items: center;
 }
+/* Voeg dit toe aan je bestaande CSS */
+.more-text-content {
+  /* Standaard verbergen met een soepele overgang */
+  max-height: 0;
+  margin-top: 5px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
 
+/* Deze class voegen we toe met JavaScript om de tekst te tonen */
+.more-text-content.show {
+  max-height: 300px; /* Een waarde die hoog genoeg is voor jouw content */
+}
+
+/* --- Voeg deze nieuwe CSS toe --- */
+
+/* Container voor de afstand boven de link */
+.linkedin-container {
+  margin-top: 25px; /* Creëert de gewenste afstand */
+}
+
+/* Styling voor de link zelf */
+.linkedin-link {
+  display: inline-flex;  /* Zet logo en tekst netjes naast elkaar */
+  align-items: center;    /* Lijn het logo en de tekst verticaal uit */
+  gap: 10px;              /* Ruimte tussen het logo en de tekst */
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;  /* Haalt de standaard onderstreping weg */
+  transition: opacity 0.2s;
+}
+
+.linkedin-link:hover {
+  opacity: 0.8; /* Geeft een subtiel effect als je eroverheen zweeft */
+}
+
+/* De container die alles bij elkaar houdt */
+.fun-profile-image {
+  position: relative; /* Noodzakelijk om de cirkels correct te positioneren */
+  width: 250px;       /* Bepaal hier de grootte van je afbeelding */
+  height: 250px;
+  margin: 40px auto;  /* Centreert de afbeelding op de pagina (optioneel) */
+}
+
+/* De foto zelf */
+.fun-profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 15px solid var(--color-primary);
+     /* Maakt de afbeelding perfect rond */
+  object-fit: cover;    /* Zorgt dat de foto niet uitrekt */
+  position: relative;   /* Zorgt dat de foto boven de cirkels komt */
+  z-index: 2;           /* Plaats de foto op de voorgrond (laag 2) */
+}
+
+/* De binnenste (donkerdere) border */
+.fun-profile-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  
+  /* Hier maak je de border. Pas dikte en kleur aan. */
+  border: 12px solid #6a8eae; 
+  
+  z-index: 1; /* Plaats deze border achter de foto (laag 1) */
+  box-sizing: border-box; /* Zorgt dat de border binnen de container valt */
+}
+
+/* De buitenste 'schaduw' cirkel (lichter) */
+.fun-profile-image::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0; /* Plaats deze cirkel helemaal achteraan (laag 0) */
+  
+  /* Maak de cirkel iets groter dan de container */
+  width: 103%;
+  height: 103%;
+
+  /* Positioneer de cirkel iets naar rechtsonder */
+  top: 5%;
+  left: 3%;
+  
+  /* Geef de cirkel zijn kleur */
+  background-color: #b2c8da;
+}
 .founder-image img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 8px solid var(--color-primary-light);
+  border: 10px solid var(--color-primary-light);
   object-fit: cover;
 }
 

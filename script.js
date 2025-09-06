@@ -17,4 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+    
+    // Selecteer de knop en de extra tekst via hun id
+    const readMoreBtn = document.getElementById('read-more-btn');
+    const moreText = document.getElementById('more-text');
+
+    // Voeg een 'click' event listener toe aan de knop
+    readMoreBtn.addEventListener('click', function(event) {
+      // Voorkom dat de link naar de bovenkant van de pagina springt
+      event.preventDefault(); 
+      
+      // Voeg de 'show' class toe aan de tekstcontainer om deze zichtbaar te maken
+      moreText.classList.add('show');
+      
+      // Verberg de "Lees meer" knop
+      readMoreBtn.style.display = 'none';
+    });
+
 });
