@@ -786,7 +786,7 @@ footer {
 
 /* Testimonial sectie */
 .testimonial {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary);
   padding: 60px 20px;
   text-align: center;
 }
@@ -801,18 +801,18 @@ footer {
   font-style: italic;
   line-height: 1.4;
   margin-bottom: 20px;
-  color: var(--color-text);
+  color: var(--color-background);
 }
 
 .testimonial cite {
   font-size: 1.1em;
-  color: var(--color-primary);
+  color: var(--color-primary-light);
   font-weight: bold;
 }
 
 /* FAQ sectie */
 .faq {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light);
   color: white;
   padding: 60px 20px;
 }
