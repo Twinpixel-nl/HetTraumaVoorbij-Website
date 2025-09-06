@@ -899,7 +899,129 @@ footer {
   opacity: 0.9;
   max-height: 800px;
 }
+/* ================================================ */
+/*                     FOOTER                       */
+/* ================================================ */
 
+/* De footer zelf is de donkerblauwe basis */
+footer {
+  background-color: var(--color-primary); /* Donkerblauw */
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px; /* Belangrijk om de vorm netjes te houden */
+}
+
+/* DE MAGIE: Dit is de lichtblauwe schuine vorm */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  
+  /* De vorm is lichtblauw */
+  background-color: var(--color-primary-light);
+  
+  /* Dit snijdt de vorm schuin af (hoog links, laag rechts) */
+  clip-path: polygon(0 0, 0 80%, 40% 100%, 100% 0); /* Pas percentages aan voor de helling */
+
+  z-index: 0;
+}
+
+/* De content-container die alles uitlijnt */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 5%; /* Padding boven/onder en aan de zijkanten */
+  
+  /* MEER RUIMTE: Verhoog de minimale hoogte */
+  min-height: 250px; 
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* LIJNT ALLES AAN DE ONDERKANT UIT */
+  
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Kolom 1: Logo Cirkel --- */
+.footer-logo-circle {
+  width: 130px; /* Iets groter voor meer impact */
+  height: 130px;
+  border-radius: 50%;
+  background-color: #e9eef2;
+  flex-shrink: 0;
+}
+
+/* --- Kolom 2: Info & Socials --- */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Lijn alles rechts uit */
+  gap: 25px;
+  color: #000;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.social-link svg {
+  width: 28px;
+  height: 28px;
+  fill: #000;
+  flex-shrink: 0;
+}
+
+.social-text {
+  line-height: 1.2;
+}
+
+.social-text, .social-link span {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+/* --- Copyright --- */
+.footer-copyright {
+  font-size: 0.9em;
+  color: var(--color-primary-light); /* Lichte kleur, goed leesbaar op donkerblauw */
+  opacity: 0.8;
+}
+
+/* --- Responsive aanpassingen --- */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    min-height: auto; /* Laat hoogte automatisch aanpassen op mobiel */
+    padding-top: 40px;
+  }
+
+  /* Op mobiel kan de cirkel kleiner of verborgen worden */
+  .footer-logo-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .footer-info {
+    align-items: center;
+  }
+}
 /* Responsive aanpassingen voor kleinere schermen */
 @media (max-width: 1024px) and (min-width: 769px) {
   .info-cards {
