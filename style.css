@@ -82,12 +82,176 @@ a {
   max-width: 80%;
   height: auto;
 }
+/* ================================================ */
+/*           HEADER STYLING (MET MOBIELE KNOPPEN)   */
+/* ================================================ */
+
+.site-header {
+  background-color: var(--color-background);
+  padding: 1.1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a:hover {
+  transform: scale(1.05);
+}
+
+.logo a {
+  display: block; /* Zorgt dat de link de grootte van de afbeelding aanneemt */
+}
+
+.logo img {
+  width: 70px;
+  height: auto;
+  display: block;
+}
+
+/* --- Navigatiemenu op Desktop --- */
+.main-navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.main-navigation a {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.main-navigation a:hover {
+  opacity: 0.8;
+}
+
+/* --- Actieknoppen (algemene stijl) --- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 
 .login-button {
+  font-weight: 700;
   color: var(--color-primary);
-  font-size: 1.1em;
-  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
+
+.login-button:hover {
+  color: var(--color-primary-light);
+}
+
+.header-cta {
+  background-color: var(--color-secondary);
+  color: var(--color-white) !important;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-cta:hover {
+  background-color: #8fa8c4;
+  transform: translateY(-2px);
+}
+
+/* Zorg dat de mobiele knoppen standaard verborgen zijn */
+.mobile-actions {
+  display: none;
+}
+
+/* --- Hamburger Menu Knop --- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ================================================ */
+/*           RESPONSIVE STYLING (MOBIELE HEADER)    */
+/* ================================================ */
+
+@media (max-width: 900px) {
+  /* Verberg het normale menu en de desktop-knoppen */
+  .main-navigation ul,
+  .desktop-actions {
+    display: none;
+  }
+  
+  /* Toon de hamburger knop */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Styling voor het uitgeklapte menu */
+  .main-navigation.active {
+    display: flex;
+    flex-direction: column; /* Stapel links en knoppen onder elkaar */
+    align-items: center;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+  }
+
+  .main-navigation.active ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    gap: 25px;
+  }
+
+  /* Toon en stijl de mobiele knoppen in het open menu */
+  .main-navigation.active .mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--color-primary); /* Nette scheidingslijn */
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Animatie voor de hamburger knop naar een 'X' */
+  .menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
  .hero {
   background-image: url("images/hero-background.jpg"); /* Vervang dit door je eigen achtergrondafbeelding */
 

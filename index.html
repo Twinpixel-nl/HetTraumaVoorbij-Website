@@ -15,15 +15,46 @@
     />
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-content">
-        <div class="logo">
-          <!-- Vervang dit door je eigen logo -->
-          <img src="images/logo.png" alt="Logo Het Trauma Voorbij" />
-        </div>
+<!-- ================== HEADER MET MOBIELE KNOPPEN ================== -->
+<header class="site-header">
+  <div class="header-content">
+    
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Logo Het Trauma Voorbij" />
+      </a>
+    </div>
+
+    <!-- Navigatiemenu -->
+    <nav class="main-navigation" id="main-nav">
+      <ul>
+        <li><a href="#intro">Over mij</a></li>
+        <li><a href="#membership">Aanbod</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      
+      <!-- DEZE KNOPPEN ZIJN SPECIAAL VOOR HET MOBIELE MENU -->
+      <div class="header-actions mobile-actions">
         <a href="#" class="login-button">Login</a>
+        <a href="#" class="cta-button header-cta">Aanmelden</a>
       </div>
-    </header>
+    </nav>
+
+    <!-- DEZE KNOPPEN ZIJN SPECIAAL VOOR DE DESKTOP VERSIE -->
+    <div class="header-actions desktop-actions">
+      <a href="#" class="login-button">Login</a>
+      <a href="#" class="cta-button header-cta">Aanmelden</a>
+    </div>
+
+    <!-- Hamburger menu knop -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menu openen/sluiten">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+  </div>
+</header>
 
     <main>
       <section class="hero">

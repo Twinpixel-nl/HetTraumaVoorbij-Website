@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-    
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mainNav.classList.toggle('active');
+  });
     // Selecteer de knop en de extra tekst via hun id
     const readMoreBtn = document.getElementById('read-more-btn');
     const moreText = document.getElementById('more-text');
