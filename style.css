@@ -672,8 +672,7 @@ footer {
 
 .info-card.ratio {
   grid-area: ratio;
-  background-color: var(--color-primary-light);
-  color: var(--color-text);
+  background-color: #889fb9;
 }
 
 .info-card.emotie {
