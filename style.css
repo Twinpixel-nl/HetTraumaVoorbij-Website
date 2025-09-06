@@ -88,46 +88,62 @@ a {
   font-size: 1.1em;
   font-weight: bold;
 }
-
-/* Hero Sectie */
-.hero {
+ .hero {
   background-image: url("images/hero-background.jpg"); /* Vervang dit door je eigen achtergrondafbeelding */
-  height: 550px; /* Hoogte van de hero sectie */
+
+  position: relative;
+  display: flex;
+  align-items: center; /* Centreert de content verticaal */
+  justify-content: flex-start; /* Lijn de content links uit */
+  min-height: 520px; /* Minimale hoogte van de sectie */
+  padding: 20px 8%; /* Ruimte aan de zijkanten */
+            
+  /* Achtergrondafbeelding instellingen */
   background-size: cover;
   background-position: center;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
+ }
+  /* Donkere overlay om de tekst leesbaarder te maken */
+  .hero::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Donkere overlay voor betere leesbaarheid */
-}
+  background-color: rgba(30, 28, 25, 0.4); /* Een donkere, lichtbruine tint */
+  z-index: 1; /* Zorgt dat de overlay onder de tekst komt */
+  }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
+  /* Container voor de tekst, zodat deze boven de overlay komt */
+  .hero-content {
+   position: relative;
+   z-index: 2; /* Boven de overlay */
+  }  
+  /* Stijl voor het gemarkeerde deel van de titel */
+  .hero h1 .highlight {
+   color: var(--color-primary); /* Lichtblauwe kleur */
+   display: inline-block; /* Zorgt dat de border alleen onder de tekst komt */
+   border-bottom: 3px solid var(--color-primary) !important; /* Onderlijn in dezelfde kleur */
+   padding-bottom: 4px; /* Kleine ruimte tussen tekst en lijn */
+  }
 
-.hero h1 {
-  font-size: 2.8em;
-  font-weight: 500;
-  margin-bottom: 15px;
-  line-height: 1.2;
-  color: var(--color-primary-light);
-}
-
-.hero p {
-  font-size: 1.2em;
-  font-weight: 300;
-}
+  /* Stijl voor de hoofdtitel (H1) */
+  .hero h1 {
+   font-size: 3em; /* Groot lettertype */
+   font-weight: 500;
+   line-height: 1.3;
+   margin: 0 0 20px 0; /* Ruimte onder de titel */
+   color: var(--color-primary-light);
+  }
+       
+  /* Stijl voor de paragraaf */
+  .hero p {
+   font-size: 1.25em;
+   font-weight: 300; /* Lichter lettertype */
+   line-height: 1.5;
+   margin: 0;
+   color: var(--color-background);
+  }
 
 /* Introductie Sectie */
 .intro {
@@ -143,8 +159,9 @@ a {
 
 .intro .lead {
   font-size: 1.3em;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.5;
+  color: var(--color-primary-light);
 }
 
 .intro h2 {
