@@ -845,61 +845,64 @@ a {
   opacity: 0.9;
   max-height: 800px;
 }
+/* ==================
+   FOOTER STYLES (VOOR ICON FONT)
+   ================== */
+
 footer {
-    background-color: var(--color-primary); /* Donkere achtergrond voor de footer */
-    color: #fff; /* Witte tekstkleur */
-    padding: 20px 0;
-    text-align: center;
-    font-family: Arial, sans-serif;
+  background-color: var(--color-primary);
+  padding: 30px 40px;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: center; /* Centreer de inhoud horizontaal */
-    align-items: center; /* Centreer de inhoud verticaal */
-    flex-wrap: wrap; /* Zorg ervoor dat items naar de volgende regel gaan op kleinere schermen */
-    margin-bottom: 15px;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-logo img {
-    max-width: 100px; /* Maximale breedte voor het logo */
-    height: auto;
-    margin-right: 20px; /* Ruimte rechts van het logo */
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
 }
 
 .social-icons a {
-    margin: 0 10px; /* Ruimte tussen de social media iconen */
-    display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #7a9bb8; /* Lichte achtergrond voor de iconen */
+  color: var(--color-primary-light); /* De kleur van het icoon */
+  font-size: 25px; /* De grootte van het icoon */
+  transition: transform 0.2s ease;
 }
 
-.social-icons img {
-    width: 30px; /* Breedte van de social media iconen */
-    height: 30px;
-    vertical-align: middle; /* Zorgt ervoor dat de iconen netjes uitgelijnd zijn */
+.social-icons a:hover {
+  transform: scale(1.1);
 }
-
 .footer-bottom {
-    border-top: 1px solid var(--color-primary); /* Een lijn boven de copyrighttekst */
-    padding-top: 15px;
-    margin-top: 15px;
+  max-width: 1100px;
+  margin: 30px auto 0 auto;
+  padding-top: 20px;
+  /* Subtiele witte lijn als scheiding */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
 .footer-bottom p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #bbb; /* Lichtere kleur voor de copyrighttekst */
-}
-
-/* Responsiviteit voor kleinere schermen */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Stapel items verticaal op kleinere schermen */
-    }
-
-    .footer-logo {
-        margin-bottom: 15px; /* Ruimte onder het logo */
-        margin-right: 0;
-    }
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--color-primary-light);
+  opacity: 0.8; /* Maakt de tekst iets minder dominant */
 }
 /* Responsive aanpassingen voor kleinere schermen */
 @media (max-width: 1024px) and (min-width: 769px) {
