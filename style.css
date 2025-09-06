@@ -13,7 +13,7 @@
   --color-background: #f8f8f8;
 
   /* Extra handige kleuren */
-  --color-text: #333333;
+  --color-text: #000000;
   --color-white: #ffffff;
   --color-border: #e0e0e0;
 
@@ -191,14 +191,15 @@ a {
   list-style: none;
   padding-left: 0;
   font-size: 1.1em;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.8;
+  color: var(--color-text);
 }
 
 .intro ul li {
   padding-left: 30px;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .intro ul li::before {
@@ -217,13 +218,14 @@ a {
 .intro p:last-of-type {
   margin-top: 40px;
   font-size: 1.2em;
-  font-weight: 300;
+  font-weight: 400;
+  color: var(--color-primary-light);
 }
 
 /* Oprichter Sectie */
 .founder {
   background-color: var(--color-background);
-  padding: 50px 20px;
+  padding: 100px 20px;
 }
 
 .founder-content {
@@ -239,10 +241,11 @@ a {
   flex: 2;
 }
 
-.founder h3 {
+.founder h2 {
   color: var(--color-primary);
-  font-size: 1.5em;
-  font-weight: normal;
+  font-size: 1.9em;
+  font-weight: 600;
+  margin-bottom: 40px;
 }
 
 .founder-text p {
