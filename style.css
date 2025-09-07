@@ -128,11 +128,29 @@ a {
   font-size: 1rem;
   color: var(--color-primary);
   text-decoration: none;
+  position: relative; /* Needed for the underline effect */
   transition: opacity 0.3s ease;
+  padding-bottom: 4px; /* Space for the underline */
+}
+
+.main-navigation a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
 .main-navigation a:hover {
-  opacity: 0.8;
+  opacity: 1;
+}
+
+.main-navigation a:hover::after {
+  width: 100%;
 }
 
 /* --- Actieknoppen (algemene stijl) --- */
@@ -146,11 +164,30 @@ a {
   font-weight: 700;
   color: var(--color-primary);
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+  position: relative; /* Needed for underline effect */
+  transition: color 0.3s ease, opacity 0.3s ease;
+  padding-bottom: 4px; /* Space for the underline */
+}
+
+.login-button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
 .login-button:hover {
   color: var(--color-primary-light);
+  opacity: 1;
+}
+
+.login-button:hover::after {
+  width: 100%;
 }
 
 .header-cta {
