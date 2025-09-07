@@ -367,6 +367,52 @@ a {
   padding: 50px 20px;
 }
 
+/* --- Intro Section Animations & Effects --- */
+.intro {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: intro-fade-in 1s cubic-bezier(0.4,0,0.2,1) 0.2s forwards;
+}
+
+@keyframes intro-fade-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.intro ul li {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: intro-li-in 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.intro ul li:nth-child(1) { animation-delay: 0.4s; }
+.intro ul li:nth-child(2) { animation-delay: 0.55s; }
+.intro ul li:nth-child(3) { animation-delay: 0.7s; }
+.intro ul li:nth-child(4) { animation-delay: 0.85s; }
+.intro ul li:nth-child(5) { animation-delay: 1s; }
+.intro ul li:nth-child(6) { animation-delay: 1.15s; }
+
+@keyframes intro-li-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.intro ul li {
+  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+  border-radius: 8px;
+  padding: 8px 18px 8px 30px;
+}
+
+.intro ul li:hover {
+  background: rgba(255,255,255,0.13);
+  color: var(--color-primary-light);
+  box-shadow: 0 2px 12px rgba(173,216,230,0.10);
+}
+
 .intro-content {
   max-width: 800px;
   margin: 0 auto;
@@ -573,6 +619,24 @@ a {
   border-radius: 16px;
   font-size: 1.1em;
   line-height: 1.6;
+}
+
+/* --- Card Hover Effects --- */
+.feature-card,
+.membership-item,
+.info-card {
+  transition: 
+    transform 0.25s cubic-bezier(0.4,0,0.2,1),
+    box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform, box-shadow;
+}
+
+.feature-card:hover,
+.membership-item:hover,
+.info-card:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 8px 32px rgba(106, 142, 174, 0.18), 0 2px 8px rgba(0,0,0,0.06);
+  z-index: 2;
 }
 
 .feature-card svg {
