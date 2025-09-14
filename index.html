@@ -26,28 +26,28 @@
     </div>
 
     <!-- Navigatiemenu -->
-    <nav class="main-navigation" id="main-nav">
+    <nav class="main-navigation" id="main-nav" aria-label="Hoofdnavigatie">
       <ul>
-        <li><a href="#founder">Over mij</a></li>
-        <li><a href="#membership">Aanbod</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#founder" aria-label="Ga naar Over mij">Over mij</a></li>
+        <li><a href="#membership" aria-label="Ga naar Aanbod">Aanbod</a></li>
+        <li><a href="#faq" aria-label="Ga naar FAQ">FAQ</a></li>
       </ul>
       
       <!-- DEZE KNOPPEN ZIJN SPECIAAL VOOR HET MOBIELE MENU -->
       <div class="header-actions mobile-actions">
-        <a href="https://hettraumavoorbij.huddlecommunity.com/login" class="login-button">Login</a>
-        <a href="https://hettraumavoorbij.plugandpay.com/checkout/community" class="cta-button header-cta">Aanmelden</a>
+        <a href="https://hettraumavoorbij.huddlecommunity.com/login" class="login-button" aria-label="Login voor leden">Login</a>
+        <a href="https://hettraumavoorbij.plugandpay.com/checkout/community" class="cta-button header-cta" aria-label="Aanmelden voor community">Aanmelden</a>
       </div>
     </nav>
 
     <!-- DEZE KNOPPEN ZIJN SPECIAAL VOOR DE DESKTOP VERSIE -->
     <div class="header-actions desktop-actions">
-      <a href="https://hettraumavoorbij.huddlecommunity.com/login" class="login-button">Login</a>
-      <a href="https://hettraumavoorbij.plugandpay.com/checkout/community" class="cta-button header-cta">Aanmelden</a>
+      <a href="https://hettraumavoorbij.huddlecommunity.com/login" class="login-button" aria-label="Login voor leden">Login</a>
+      <a href="https://hettraumavoorbij.plugandpay.com/checkout/community" class="cta-button header-cta" aria-label="Aanmelden voor community">Aanmelden</a>
     </div>
 
     <!-- Hamburger menu knop -->
-    <button class="menu-toggle" id="menu-toggle" aria-label="Menu openen/sluiten">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menu openen of sluiten" aria-controls="main-nav" aria-expanded="false">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -96,7 +96,7 @@
         </div>
       </section>
 
-      <section class="founder" id="founder">
+     <section class="founder" id="founder">
         <div class="founder-content">
           <div class="founder-text">
             <h2>Oprichter Katalijn Ritsema <br> van Eck (1977):</h2>
@@ -135,6 +135,7 @@ en hapklare informatie blokjes. Ook wil ik met dit platform een community creër
             <img
               src="images/Katalijn.jpg"
               alt="Foto van Katalijn Krijn Ritsema van Eck"
+              aria-label="Foto van Katalijn Krijn Ritsema van Eck"
             />
           </div>
         </div>
@@ -142,7 +143,7 @@ en hapklare informatie blokjes. Ook wil ik met dit platform een community creër
           Dit platform is geen vervanging voor een behandeling.
         </p>
       </section>
-      <section class="membership" id="membership">
+        <section class="membership" id="membership" aria-label="Lidmaatschap en voordelen">
         <div class="membership-content">
 
           <h2>Lid worden? Wat krijg je dan?</h2>
@@ -251,7 +252,7 @@ en hapklare informatie blokjes. Ook wil ik met dit platform een community creër
 </div>
         </div>
       </section>
-      <section class="platform-info">
+      <section class="platform-info" aria-label="Informatie over het platform">
         <div class="platform-content">
           <h2>Het Trauma Voorbij is je mentale sportschool!</h2>
           <div class="info-cards">
@@ -407,13 +408,13 @@ en hapklare informatie blokjes. Ook wil ik met dit platform een community creër
               <a href="https://hettraumavoorbij.plugandpay.com/checkout/community" class="cta-button">Begin nu</a>
             </div>
             <p class="pricing-disclaimer">
-              Maandelijks opzegbaar, zonder verplichtingen*
+              Maandelijks opzegbaar, zonder verplichtingen
             </p>
           </div>
         </div>
       </section>
 
-      <section class="testimonial">
+      <section class="testimonial" aria-label="Ervaringen">
         <div class="testimonial-content">
           <blockquote>
             "The only pain that can be avoided is the pain that comes from
@@ -423,7 +424,7 @@ en hapklare informatie blokjes. Ook wil ik met dit platform een community creër
         </div>
       </section>
 
-      <section class="faq" id="faq">
+      <section class="faq" id="faq" aria-label="Veelgestelde vragen">
         <div class="faq-content">
           <h2>FAQ's</h2>
           <div class="faq-items">
@@ -431,8 +432,7 @@ en hapklare informatie blokjes. Ook wil ik met dit platform een community creër
               <h3>Voor wie is dit platform?</h3>
               <div class="faq-answer">
                 <p>
-                  Dit platform is voor mensen waarbij jeugdtrauma doorwerkt in hun leven vandaag.
-Speelde er in het gezin waar je opgroeide (tot de 18 jaar) het volgende:</p>
+                  Dit platform is voor mensen waarbij jeugdtrauma doorwerkt in hun leven vandaag. Om een beeld te krijgen wat onder jeugdtrauma valt, deze 10 vragen. Speelde er in het gezin waar je opgroeide (tot de 18 jaar) het volgende? Hou bij hoe vaak je ‘ja’ zegt. </p>
 <br>
                   <lu>
 <li>Ben je een ouder verloren (bv door een scheiding, overlijden, verlating)</li>
@@ -444,9 +444,10 @@ Speelde er in het gezin waar je opgroeide (tot de 18 jaar) het volgende:</p>
 <li>Fysiek geweld (je bent regelmatig geslagen, er is iets naar je gegooid, je bent ruw vastgepakt)</li>
 <li>Seksueel misbruik (eenmalig of regelmatig)</li>
 <li>Een ouder die geweld ondergaat (bv vader slaat of bedreigt moeder regelmatig)</li>
-<li>Crimineel gedrag in het gezin (bv iemand in de gevangenis)
-De meeste mensen zeggen 1 keer ja. Vier keer ja zeggen, is al heel veel. Elke ‘ja’ is een teken van jeugdtrauma. Hoe vaker je ja zegt, hoe langer het duurde, hoe groter de kans dat het doorwerkt in je volwassen leven, mentaal én fysiek. Deze vragenlijst heet ACE “adverse childhood Experiences”.</li>
-                  </lu>                
+<li>Crimineel gedrag in het gezin (bv iemand in de gevangenis)</li>
+</lu>
+<br>
+ <P>De meeste mensen zeggen 1 keer ja, als ze deze vragenlijst doorlopen. Echter, vier keer ja zeggen, is al heel veel. Elke ‘ja’ is een teken van jeugdtrauma. Hoe vaker je ja zegt, hoe langer het duurde, hoe intenser het was, hoe groter de kans dat het doorwerkt in je volwassen leven, mentaal én fysiek. Deze vragenlijst heet overigens ACE “adverse childhood Experiences”.</P>
               </div>
             </div>
             <div class="faq-item">
@@ -474,17 +475,17 @@ Als je mentale problemen hebt, en hulp nodig hebt, ga dan naar je huisarts. Een 
   <div class="footer-container">
     <!-- BLOK 1: HET LOGO -->
     <div class="footer-logo">
-      <img src="images/logo.png" alt="Het Trauma Voorbij Logo">
+      <img src="images/logo.png" alt="Het Trauma Voorbij Logo" aria-label="Logo Het Trauma Voorbij">
     </div>
 
     <!-- BLOK 2: DE DETAILS (ICONEN + TEKST) -->
     <div class="footer-details">
       <!-- Kolom met iconen -->
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/katalijnritsemavaneck/" target="_blank" aria-label="LinkedIn">
+      <div class="social-icons" aria-label="Sociale media links">
+        <a href="https://www.linkedin.com/in/katalijnritsemavaneck/" target="_blank" aria-label="LinkedIn-profiel van Katalijn Ritsema van Eck">
           <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://www.instagram.com/hettraumavoorbij" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/hettraumavoorbij" target="_blank" aria-label="Instagram-profiel van Het Trauma Voorbij">
           <i class="fa-brands fa-instagram"></i>
         </a>
       </div>
